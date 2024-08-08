@@ -248,7 +248,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     background-color: #f5f5f5;
 }
 
@@ -353,6 +353,11 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.comment .cmt img{
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -480,3 +485,21 @@ body {
     font-size: 1.2em;
 }
 
+.comment{
+    border: 1px solid;
+    margin-top: 25px;
+   
+}
+
+.comment .cmt{
+    padding: 20px;
+    display: flex;
+}
+.profile{
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    gap: 10px; /* Khoảng cách giữa các cột */
+}
+.comment .cmt .profile img{
+    border-radius: 45px;
+}
