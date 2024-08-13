@@ -43,5 +43,5 @@ switch(number){
     console.log('chủ nhật');
     break;
     default:
-        console.log('thứ không hợp lệ ');
+    console.log('thứ không hợp lệ ');
 }
