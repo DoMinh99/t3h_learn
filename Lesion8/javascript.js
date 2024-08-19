@@ -102,3 +102,43 @@
 
 
 
+// switch(number){
+//     case 2: 
+//     console.log('thứ hai');
+//     break;
+//     case 3: 
+//     console.log('thứ ba');
+//     break;
+//     case 4: 
+//     console.log('thứ tư');
+//     break;
+//     case 5: 
+//     console.log('thứ năm');
+//     break;
+//     case 6: 
+//     console.log('thứ sáu');
+//     break;
+//     case 7: 
+//     console.log('thứ bảy');
+//     break;
+//     case 8: 
+//     console.log('chủ nhật');
+//     break;
+//     default:
+//     console.log('thứ không hợp lệ ');
+// }
+
+// Tìm các phần tử là số nguyên tố trong mảng.
+for(let number of numbers){
+    let count = 0;
+    for(let i = 1; i<=number; i++){
+        if(number % i === 0){
+            count = count + 1;
+        }
+    }
+    if(count === 2){
+        console.log(number + ' là số nguyên tố')
+    } else {
+        console.log(number + ' không phải số nguyên tố')
+    }
+}
