@@ -7,3 +7,12 @@ function hehe(name){
 }
 
 hehe("hồng minh");
+
+//bài 2
+// 2. Khai báo 1 function nhận đầu vào là 2 số a, b. Đầu ra là kết quả của phép tính (a + b)^2 .
+
+function pheptinh(a,b){
+    console.log( (a + b)**2);
+}
+
+pheptinh(3,4);
