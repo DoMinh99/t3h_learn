@@ -35,3 +35,11 @@ console.log(bangai);
 // Viết chương trình kiểm tra nếu tuổi của bạn và bạn gái (trai) đều lớn hơn 20, 
 // in ra màn hình “Tầm này cưới được rồi”. Ngược lại, in ra “Chờ thêm chút nữa”
 
+let bannam = 25;
+let bannu = 24;
+
+if ( bannam && bannu > 20){
+    console.log("Tầm này cưới được rồi");
+}else{
+    console.log("chờ thêm chút nữa");
+}
