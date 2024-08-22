@@ -24,3 +24,5 @@ const texts = ["hello", "world", "hongminh", "hocmai"];
 const textsLength = texts.map(text => text.length);
 
 console.log(textsLength); // Output: [5, 5, 10, 6]
+
+
