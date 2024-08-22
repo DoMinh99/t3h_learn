@@ -16,3 +16,23 @@ function pheptinh(a,b){
 }
 
 pheptinh(3,4);
+
+
+// bài 3
+// 3. Khai báo 1 function để nhập vào a từ bàn phím, 
+// tiếp tục nhập đến khi a là một số lớn hơn 0. Đầu ra là giá trị số vừa nhập.
+
+    let input;
+
+    do {
+        input = prompt("Vui lòng nhập một số lớn hơn 0:");
+    } while (input < 0);
+    
+    console.log("Cảm ơn bạn! Số bạn đã nhập là: " + input);
+
+
+
+
+
+
+
