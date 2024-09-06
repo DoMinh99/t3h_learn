@@ -30,7 +30,7 @@ $btnCreateProduct.addEventListener('click', function () {
 	};
 	// Bước 5: thêm sản phẩm vừa tạo vào trong danh sách sản phẩm đã có
 	listProduct.push(newProduct);
-	// Bước 6: sau khi tạo thành công thì sẽ reset input
+	// Bước 6: sau khi tạo thành công thì sẽ reset input, gán là chuối rỗng
 	$idProduct.value = '';
 	$titleProduct.value = '';
 	$priceProduct.value = '';
