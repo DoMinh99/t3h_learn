@@ -68,10 +68,21 @@
 // console.log(sum);
 
 // nhập 1 trị từ bàn phím, nếu là số chẵn thì chương trình kết thúc
-let number;
-do {
-    number = prompt('nhập số kiểm tra');
-    number = Number(number);
-} while(number % 2 ===1);
-console.log(number);
-console.log(typeof number);
+// let number;
+// do {
+//     number = prompt('nhập số kiểm tra');
+//     number = Number(number);
+// } while(number % 2 ===1);
+// console.log(number);
+// console.log(typeof number);
+
+
+// tính giai thừa của số nhập từ bàn phím
+
+let n = prompt('nhập n');
+n = Number(n);
+let gt = 1;
+for(let i = 1; i <= n; i++){
+    gt = gt * i;
+}
+console.log(gt);
