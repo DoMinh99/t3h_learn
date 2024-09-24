@@ -30,14 +30,37 @@
 
 // bài 2: xác định giá trị được nhập
 
-let day = 9;
-    switch(day){
-        case 2: console.log('thứ hai'); break;
-        case 3: console.log('thứ ba'); break;
-        case 4: console.log('thứ tư');break;
-        case 5: console.log('thứ năm');break;
-        case 6: console.log('thứ sáu');break;
-        case 7: console.log('thứ bayr');break;
-        case 8: console.log('chủ nhật');break;
-        default: console.log('ngày không hợp lệ');break;
+// let day = 9;
+//     switch(day){
+//         case 2: console.log('thứ hai'); break;
+//         case 3: console.log('thứ ba'); break;
+//         case 4: console.log('thứ tư');break;
+//         case 5: console.log('thứ năm');break;
+//         case 6: console.log('thứ sáu');break;
+//         case 7: console.log('thứ bayr');break;
+//         case 8: console.log('chủ nhật');break;
+//         default: console.log('ngày không hợp lệ');break;
+//     }
+
+
+// sử dụng toán tử 3 ngôi 
+// let message = age >= 18? 'người lớn' : age < 18 && >= 15 ? 'thanh niên' : 'trẻ en'
+
+
+// for (let i = 1; i <= 5 ; i=i+1){
+//     console.log(i);
+// }
+
+//in ra màn hình các số chẵn từ -10 - 50
+for (let i = -10; i<= 50; i++){
+    if(i % 2 === 0 ){
+        console.log(i);
     }
+}
+
+// tính tôneg các số từ  -10 - 50
+// for (let i = -10; i<= 50; i++){
+//     if(i % 2 === 0 ){
+//         console.log(i);
+//     }
+// }

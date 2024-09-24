@@ -1,0 +1,28 @@
+for (let i = 1; i <= 5; i = i + 1) {
+	console.log(i);
+}
+
+Bước 1: Khởi tạo biến i với giá trị là 1
+Bước 2: So sánh giá trị i hiện tại với điều kiện
+Bước 3: 
+	+Nếu điều kiện trả về giá trị là true => console.log(i) sẽ được thực thi
+	+Nếu điều kiện trả về giá trị là false => vòng lặp sẽ kết thúc
+	+Hiện tại: i = 1 => i <= 5 => true
+	=> console.log(i) sẽ được thực thi, và kết quả in lên màn hình là 1
+Bước 4: Sau khi code trong vòng lặp được thực thi thì sẽ chạy đến
+statement 3, trong trường hiện tại là i = i + 1 (tăng i lên 1 đơn vị)
+Bước 5: Quay lại kiểm tra điều kiện 
+	+Nếu điều kiện trả về giá trị là true => console.log(i) sẽ được thực thi
+	+Nếu điều kiện trả về giá trị là false => vòng lặp sẽ kết thúc
+	+Hiện tại: i = 2 => i <= 5 => true
+	=> console.log(i) sẽ được thực thi, và kết quả in lên màn hình là 2
+Bước 3, 4, 5 sẽ được lặp lại đến khi điều kiện trả về là true thì vòng lặp sẽ dừng lại
+Các bước tiếp theo:
+	+) i = 3 => i <= 5 => true
+	=> console.log(i) sẽ được thực thi, và kết quả in lên màn hình là 3
+	+) i = 4 => i <= 5 => true
+	=> console.log(i) sẽ được thực thi, và kết quả in lên màn hình là 4
+	+) i = 5 => i <=5 => true
+	=> console.log(i) sẽ được thực thi, và kết quả in lên màn hình là 5
+	+) i = 6 => i <= 5 => false
+	=> vòng lặp sẽ kết thúc
