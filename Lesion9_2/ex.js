@@ -62,3 +62,44 @@ for(let number of numbers2){
     }
 }
 console.log(min);
+
+
+
+const numbers = [10,20,30,40];
+console.log(numbers);
+// numbers.push(50,60,70);
+// console.log(numbers);
+// numbers.unshift(-20, -10, 0);
+// console.log(numbers);
+// numbers.pop();
+// console.log(numbers);
+// numbers.shift();
+// console.log(numbers);
+// Dùng splice để xóa phần tử
+// numbers.splice(2, 1);
+// console.log(numbers);
+// Dùng splice để thêm phần tử
+// numbers.splice(2, 0, 25,26,27,28,29);
+// console.log(numbers);
+
+// Cho mảng sau: numbers = [10, 4, -7, 9, 100, 3, -21, 0, 33];
+const numbers3 = [10, 4, -7, 9, 100, 3, -21, 0, 33];
+// Tìm phần tử nhỏ nhất / lớn nhất trong mảng.
+let min = numbers3[0], max = numbers3[0];
+// Tính tổng các phần tử trong mảng.
+let sum = 0;
+for(let number of numbers3){
+    if(number < min){
+        min = number;
+    }
+    if(number > max){
+        max = number;
+    }
+    sum +=number;
+}
+console.log('min: ', min);
+console.log('max: ', max);
+console.log('sum: ', sum);
+// Tính trung bình cộng các phần tử trong mảng.
+const avg = sum / numbers3.length;
+console.log('avg: ', avg);
