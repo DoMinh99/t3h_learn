@@ -7,21 +7,58 @@
 
 //truy xuất và thay đổi giá trị 
 //truy xuất
-const fruits = ['apple', 'banana', 'sung'];
-console.log(fruits);
+// const fruits = ['apple', 'banana', 'sung'];
+// console.log(fruits);
 
-console.log(fruits[0]);
+// console.log(fruits[0]);
 
-//thay đổi giá trị
-fruits[0] = 'táo tàu';
-console.log(fruits);
+// //thay đổi giá trị
+// fruits[0] = 'táo tàu';
+// console.log(fruits);
 
-//duyệt mảng
-for (let index = 0; index <fruits.length; index++){
-    console.log(fruits[index]);
+// //duyệt mảng
+// for (let index = 0; index <fruits.length; index++){
+//     console.log(fruits[index]);
+// }
+
+// console.log("duyệt mảng theo vòng lặp for of");
+// for(let fruit of fruits){
+//     console.log(fruit);
+// }
+
+// khai báo 1 mảng có 4 phần tử khác nhau
+const arr4 = ['một','hai','ba','bốn'];
+// - in ra phần tử có chỉ số 0 và 3
+console.log(arr4[0],arr4[3]);
+// - thực hiện cộng phần tử 1 và 2
+let sum = arr4[1] + arr4[2];
+console.log(sum);
+
+// -Thực hiện hoán đổi giá trị của phần tử có chỉ số 1 và 3.
+let temp = arr4[1];
+arr4[1] = arr4[3];
+arr4[3] = temp;
+console.log(arr4);
+
+
+// BT2: Khai báo 1 mảng gồm các 5 số bất kỳ. 
+const numbers2 = [5,10,15,20,25];
+// -Hãy in ra các số chẵn trong mảng đó. 
+for(let number of numbers2){
+    if(number % 2 === 0){
+        console.log(number);
+    }
 }
-
-console.log("duyệt mảng theo vòng lặp for of");
-for(let fruit of fruits){
-    console.log(fruit);
+// -Hãy tính tổng các phần tử trong mảng. 
+let sum2 = 0;
+for(let number of numbers2){
+    sum2 = sum2+number;
 }
+// -Hãy tìm phần tử nhỏ nhất trong mảng
+let min = numbers2[0];
+for(let number of numbers2){
+    if(number < min){
+        min = number;
+    }
+}
+console.log(min);
