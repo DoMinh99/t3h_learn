@@ -31,7 +31,7 @@ const arr4 = ['một','hai','ba','bốn'];
 // - in ra phần tử có chỉ số 0 và 3
 console.log(arr4[0],arr4[3]);
 // - thực hiện cộng phần tử 1 và 2
-let sum = arr4[1] + arr4[2];
+let sum5 = arr4[1] + arr4[2];
 console.log(sum);
 
 // -Thực hiện hoán đổi giá trị của phần tử có chỉ số 1 và 3.
@@ -55,13 +55,13 @@ for(let number of numbers2){
     sum2 = sum2+number;
 }
 // -Hãy tìm phần tử nhỏ nhất trong mảng
-let min = numbers2[0];
+let min3 = numbers2[0];
 for(let number of numbers2){
-    if(number < min){
-        min = number;
+    if(number < min3){
+        min3 = number;
     }
 }
-console.log(min);
+console.log(min3);
 
 
 
