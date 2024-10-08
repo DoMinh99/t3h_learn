@@ -45,3 +45,8 @@ $h2.innerText = "xin chào thế giới"; // thay đổi nội dung của thẻ 
 $h2.id = "sub - title"; //thêm id cho thẻ h2
 
 document.body.appendChild($h2); // thêm thẻ h2 vào vị trí cuối trong thẻ body
+
+
+$a.classList.add('link');
+
+

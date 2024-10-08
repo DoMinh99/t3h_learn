@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./ex.js"> </script> 
+
+    <button onclick="sayHello1()"> Gán event trực tiếp </button>
+    <button id="Btn-click" > gán event thông qua DOM </button>
+    <script>
+        function login(){
+            const $email = document.getElementById('email');
+            const $password = document.getElementById('pasword');
+            console.log('email người dùng vừa nhập:', $email.value);
+            console.log('password người dùng vừa nhập: ', $password.value);
+
+        }
+        function sayHello1(){
+            alert('xin chào ; onclick1')
+        }
+        function sayHello2(){
+            alert('xin chào, onclick2')
+        }
+    </script>
+</body>
+</html>
