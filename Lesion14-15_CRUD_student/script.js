@@ -35,6 +35,7 @@ const $keyword = document.getElementById('keyword');
 const $sort = document.getElementById('sort');
 // button
 const $btnCreateStudent = document.getElementById('create_student');
+const $btnUpdateStudent = document.getElementById('update_student');
 const $btnSearch = document.getElementById('search');
 
 // Bước 1: Tạo ra 1 hàm renderInfoStudent
@@ -60,7 +61,9 @@ function renderInfoStudent(data) {
 							<td>${studentCurrent.english_score}</td>
 							<td>${studentCurrent.literature_score}</td>
 							<td>
-								<button class="btn btn-success" style="margin-right: 4px">
+								<button onclick="getAndShowInfoStudent(${
+									studentCurrent.id
+								})" class="btn btn-success" style="margin-right: 4px">
 									Cập nhật
 								</button>
 								<button onclick="deleteStudent(${
@@ -176,5 +179,75 @@ function sortMathScore() {
 }
 
 $sort.onchange = sortMathScore;
+
+//U => Update => Cập nhật thông tin học sinh
+// -Giai đoạn 1:
+// Bước 1: Tạo function getAndShowInfoStudent
+function getAndShowInfoStudent(id) {
+	// Bước 2: Gán function getAndShowInfoStudent cho các button tương ứng và truyền id của học sinh muốn chỉnh sửa vào trong hàm
+	// Bước 3: Sau khi lấy được id thì sẽ tìm kiếm và lấy ra toàn bộ thông tin của học sinh đó
+	let result = {};
+	for (let student of listStudent) {
+		if (student.id === id) {
+			result = student;
+			break;
+		}
+	}
+	// Bước 4: Hiển thị thông tin lên các ô input tương ứng
+	$id.value = result.id;
+	$name.value = result.name;
+	$birthday.value = result.birthday;
+	$gender.value = result.gender;
+	$mathScore.value = result.math_score;
+	$englishScore.value = result.english_score;
+	$literatureScore.value = result.literature_score;
+	// Bước 5: Show button "Cập nhật thông tin học sinh" và ẩn button "Tạo mới học sinh"
+	// Ẩn button tạo mới
+	$btnCreateStudent.style.display = 'none';
+	// Hiện button cập nhật
+	$btnUpdateStudent.style.display = 'inline-block';
+	// Bước 6: Chuyển input nhập id thành mode là disabled (vô hiệu hóa input, không cho người dùng sửa đổi giá trị)
+	$id.disabled = true;
+}
+
+// -Giai đoạn 2:
+// Bước 1: Tạo function updateStudent
+function updateStudent() {
+	// Bước 2: Lấy các thông tin người dùng vừa chỉnh sửa
+	const id = Number($id.value);
+	const name = $name.value;
+	const birthday = $birthday.value;
+	const gender = $gender.value;
+	const mathScore = $mathScore.value;
+	const englishScore = $englishScore.value;
+	const literatureScore = $literatureScore.value;
+	// Bước 3: Tìm kiếm vị trí của học sinh đó trong danh sách
+	let index = -1;
+	for (let i = 0; i < listStudent.length; i++) {
+		if (listStudent[i].id === id) {
+			index = i;
+		}
+	}
+	// Bước 3: Cập nhật vào trong danh sách học sinh
+	listStudent[index].name = name;
+	listStudent[index].birthday = birthday;
+	listStudent[index].gender = gender;
+	listStudent[index].math_score = mathScore;
+	listStudent[index].english_score = englishScore;
+	listStudent[index].literature_score = literatureScore;
+	// Bước 4: Gọi lại hàm renderInfoStudent để in ra dữ liệu mới nhất
+	renderInfoStudent();
+	// Bước 5: Reset input ()
+	resetInputs();
+	// Bước 6: Ẩn button cập nhật, hiện button tạo mới
+	// Hiện button tạo mới
+	$btnCreateStudent.style.display = 'inline-block';
+	// Ẩn button cập nhật
+	$btnUpdateStudent.style.display = 'none';
+	// Bước 7: Chuyển trạng thái disabled = false cho input nhập id
+	$id.disabled = false;
+}
+// Bước 8: Gán function updateStudent cho button "Cập nhật thông tin học sinh"
+$btnUpdateStudent.onclick = updateStudent;
 
 renderInfoStudent();
