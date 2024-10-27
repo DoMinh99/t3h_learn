@@ -1,23 +1,14 @@
-const listStudent = [
-	{
-		id: 1,
-		name: 'Trần Văn A',
-		birthday: '1/1/1998',
-		gender: 'boy',
-		math_score: 9,
-		english_score: 5,
-		literature_score: 7,
-	},
-	{
-		id: 2,
-		name: 'Lung Thị Linh',
-		birthday: '05/09/1995',
-		gender: 'girl',
-		math_score: 10,
-		english_score: 10,
-		literature_score: 5,
-	},
-];
+// localStroage.setItem('key', value);
+// localStroage.getItem('key');
+// JSON.stringify(); //chuyển đổi từ kiểu dữ liệu ban đầu => định dạng json
+// JSON.parse(); //chuyển đổi từ định dạng json => kiểu dữ liệu ban đầu
+let valueLocalStorage = localStorage.getItem('student');
+valueLocalStorage = JSON.parse(valueLocalStorage);
+if(valueLocalStorage === null){
+	valueLocalStorage = [];
+}
+
+const listStudent = valueLocalStorage;
 
 // Các biến dom
 const $tbody = document.getElementById('tbody');
@@ -94,7 +85,7 @@ function resetInputs() {
 // Bước 1: Tạo hàm createStudent
 function createStudent() {
 	// Bước 2: Lấy các thông tin người dùng vừa nhập
-	const id = $id.value;
+	const id = Number($id.value);
 	const name = $name.value;
 	const birthday = $birthday.value;
 	const gender = $gender.value;
@@ -117,8 +108,10 @@ function createStudent() {
 	resetInputs();
 	// Bước 6: Gọi lại hàm renderInfoStudent để in ra giao diện theo dữ liệu mới nhất
 	renderInfoStudent();
+	// Bước 7: Cập nhật lại thông tin vào trong localStorage
+	localStorage.setItem('student', JSON.stringify(listStudent));
 }
-// Bước 7: Gán hàm createStudent cho sự kiện onclick button "Tạo mới học sinh"
+// Bước 8: Gán hàm createStudent cho sự kiện onclick button "Tạo mới học sinh"
 $btnCreateStudent.onclick = createStudent;
 
 //D => Delete => Xóa học sinh
@@ -135,6 +128,8 @@ function deleteStudent(id) {
 	listStudent.splice(index, 1);
 	// Bước 4: Gọi lại hàm renderInfoStudent để in ra giao diện theo dữ liệu mới nhất
 	renderInfoStudent();
+	// Bước 5: Cập nhật lại thông tin vào trong localStorage
+	localStorage.setItem('student', JSON.stringify(listStudent));
 }
 
 //S => Search => Tìm kiếm học sinh
@@ -246,8 +241,10 @@ function updateStudent() {
 	$btnUpdateStudent.style.display = 'none';
 	// Bước 7: Chuyển trạng thái disabled = false cho input nhập id
 	$id.disabled = false;
+	// Bước 8: Cập nhật lại thông tin vào trong localStorage
+	localStorage.setItem('student', JSON.stringify(listStudent));
 }
-// Bước 8: Gán function updateStudent cho button "Cập nhật thông tin học sinh"
+// Bước 9: Gán function updateStudent cho button "Cập nhật thông tin học sinh"
 $btnUpdateStudent.onclick = updateStudent;
 
 renderInfoStudent();
